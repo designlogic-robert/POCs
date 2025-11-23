@@ -1,0 +1,11 @@
+$ python main.py
+
+=== SYNCE POC OUTPUT ===
+Token: USToken(token_id='1fdda430-0763-4865-ab67-87991db682dc', domain='analysis', intent='compare_documents', payload={'doc_a': 'Summary of document A...', 'doc_b': 'Summary of document B...'}, created_at='2025-11-23T11:41:51.516525', posture='analytic')
+Directive: SCPDirective(directive='DOC_COMPARE', plan_template='PLAN_COMPARE_V1', metadata={'confidence': 0.92})
+Execution Plan: ExecutionPlan(plan_id='COMPARE_EXECUTION', steps=[ExecutionStep(step='extract_features', args={'text_a': 'Summary of document A...', 'text_b': 'Summary of document B...'}), ExecutionStep(step='compare', args={}), ExecutionStep(step='summarize_risks', args={})])
+
+Execution Log:
+- extract_features: {'features_a': ['risk_A1', 'topic_A2'], 'features_b': ['risk_B1', 'topic_B2']}
+- compare: {'overlap': ['topic_A2'], 'differences': ['risk_A1', 'risk_B1']}
+- summarize_risks: {'risk_summary': 'Document A has risk_A1; Document B has risk_B1.'}
