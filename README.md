@@ -91,5 +91,6 @@ Requirements:
 Steps:
 
 ```bash
-cd synce_poc
+git clone https://github.com/designlogic-robert/synthetic-cognition-poc/
+cd synthetic-cognition-poc
 python main.py
